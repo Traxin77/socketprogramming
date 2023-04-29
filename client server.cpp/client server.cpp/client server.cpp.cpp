@@ -6,21 +6,13 @@
 #include<string>
 
 using namespace std;
-class message
-{
-    SOCKET clientSocket;
-    public:
-        int recieve(SOCKET client_socket);
-        int sendmessage(SOCKET client_socket);
-};
 int main()
 {
     cout << "-------CLIENT-------" << endl;
     SOCKET clientSocket;
     int port = 55555;
     WSADATA wsadata;
-    message m;
-    int wsaerr;
+    int wsaerr,a;
     WORD wVersionRequested = MAKEWORD(2, 2);
     wsaerr = WSAStartup(wVersionRequested, &wsadata);
     if (wsaerr != 0)
@@ -60,52 +52,19 @@ int main()
         cout << "client is connected to server" << endl;
         cout << "client and server can now start sending and recieving messages"<<endl;
     }
-
-    cout << "start messaging" << endl;
-    cout << "enter close to stop messaging" << endl;
-    cout << "1. send message" << endl;
-    cout << "2.recieve message" << endl;
-    cout << "0. exit" << endl;
-    while (1) {
-        cout << "enter your option" << endl;
-        char choice[100];
-
-        cin >> choice;
-        send(clientSocket, choice, 100, 0);
-        if (int(choice) == 1) {
-            m.sendmessage(clientSocket);
-        }
-        else if (int(choice) == 2) {
-            m.recieve(clientSocket);
-        }
-        else if (int(choice) == 0) {
-            system("pause");
-        }
-        else
-            cout << "invalid" << endl;
-    }
-    WSACleanup();
-   
-                                
-}
-int message::sendmessage(SOCKET clientsocket)
-{
+    char x[100];
+    do {
         char x[100];
+
         cout << "\nEnter Message: ";
         cin.getline(x, 100);
-        int count = send(clientsocket, x, 100, 0);
+        int count = send(clientSocket, x, 100, 0);
         if (count > 0)
             cout << "your message is sent" << endl;
         else
             WSACleanup();
-    return 0;
-}
-int message::recieve(SOCKET clientSocket) {
-    char x[100];
-    int count = recv(clientSocket, x, 100, 0);
-    if (count > 0)
-        cout << "message recieved:" << x << endl;
-    else
-        WSACleanup();
+        a= strcmp(x, "exit");
+    } while (a != 0);
+    system("pause");
     return 0;
 }

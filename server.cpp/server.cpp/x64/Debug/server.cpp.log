@@ -1,10 +1,2 @@
 ﻿  server.cpp.cpp
-C:\Users\prixi\OneDrive\Desktop\c programs\server.cpp\server.cpp\server.cpp.cpp(83,48): warning C4311: '<function-style-cast>': pointer truncation from 'char *' to 'int'
-C:\Users\prixi\OneDrive\Desktop\c programs\server.cpp\server.cpp\server.cpp.cpp(83,48): warning C4302: '<function-style-cast>': truncation from 'char *' to 'int'
-C:\Users\prixi\OneDrive\Desktop\c programs\server.cpp\server.cpp\server.cpp.cpp(84,12): warning C4311: '<function-style-cast>': pointer truncation from 'char *' to 'int'
-C:\Users\prixi\OneDrive\Desktop\c programs\server.cpp\server.cpp\server.cpp.cpp(84,12): warning C4302: '<function-style-cast>': truncation from 'char *' to 'int'
-C:\Users\prixi\OneDrive\Desktop\c programs\server.cpp\server.cpp\server.cpp.cpp(87,17): warning C4311: '<function-style-cast>': pointer truncation from 'char *' to 'int'
-C:\Users\prixi\OneDrive\Desktop\c programs\server.cpp\server.cpp\server.cpp.cpp(87,17): warning C4302: '<function-style-cast>': truncation from 'char *' to 'int'
-C:\Users\prixi\OneDrive\Desktop\c programs\server.cpp\server.cpp\server.cpp.cpp(90,17): warning C4311: '<function-style-cast>': pointer truncation from 'char *' to 'int'
-C:\Users\prixi\OneDrive\Desktop\c programs\server.cpp\server.cpp\server.cpp.cpp(90,17): warning C4302: '<function-style-cast>': truncation from 'char *' to 'int'
-C:\Users\prixi\OneDrive\Desktop\c programs\server.cpp\server.cpp\server.cpp.cpp(107): error C4716: 'message::recieve': must return a value
+  server.cpp.vcxproj -> C:\Users\prixi\OneDrive\Desktop\socket\server.cpp\x64\Debug\server.cpp.exe

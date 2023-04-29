@@ -5,22 +5,14 @@
 #include<ws2tcpip.h>
 #include<tchar.h>
 using namespace std;
-class message
-{
-    SOCKET clientSocket;
-    public:
-        int recieve(SOCKET acceptsocket);
-        int sendmessage(SOCKET acceptsocket);
-};
 
 int main(int argc,char* argv[])
 {
     SOCKET serverSocket, acceptSocket;
     cout << "------SERVER------";
-    message m;
     int port = 55555;
     WSADATA wsadata;
-    int wsaerr;
+    int wsaerr,a;
     WORD wVersionRequested = MAKEWORD(2, 2);
     wsaerr = WSAStartup(wVersionRequested, &wsadata);
     if (wsaerr != 0)
@@ -77,43 +69,15 @@ int main(int argc,char* argv[])
     }
     cout << "connection accepted" << endl;
     cout << "server and client are connected"<<endl;
-    while (1) {
-        char choice[100];
-        recv(acceptSocket, choice, 100, 0);
-        cout << "your option is " << int(choice);
-        if (int(choice) == 1) {
-            m.recieve(acceptSocket);
-        }
-        else if (int(choice) == 2) {
-            m.sendmessage(acceptSocket);
-        }
-        else if (int(choice) == 0) {
-            system("pause");
-        }
+    char x[100];
+    do {
+        int count = recv(acceptSocket, x, 100, 0);
+        if (count > 0)
+            cout << "message recieved:" << x << endl;
         else
-            cout << "invalid" << endl;
-       
-    }
-    WSACleanup();
-  
-}
-int message::recieve(SOCKET acceptSocket) {
-    char x[100];
-    int count = recv(acceptSocket, x, 100, 0);
-    if (count > 0)
-        cout << "message recieved:" << x << endl;
-    else
-        WSACleanup();
-}
-int message::sendmessage(SOCKET acceptsocket)
-{
-    char x[100];
-    cout << "\nEnter Message: ";
-    cin.getline(x, 100);
-    int count = send(acceptsocket, x, 100, 0);
-    if (count > 0)
-        cout << "your message is sent" << endl;
-    else
-        WSACleanup();
+            WSACleanup();
+        a = strcmp(x, "exit");
+    } while (a!= 0);
     return 0;
 }
+
