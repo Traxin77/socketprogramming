@@ -1,0 +1,8 @@
+﻿  client server.cpp.cpp
+C:\Users\prixi\OneDrive\Desktop\c programs\client server.cpp\client server.cpp\client server.cpp.cpp(75,12): warning C4311: '<function-style-cast>': pointer truncation from 'char *' to 'int'
+C:\Users\prixi\OneDrive\Desktop\c programs\client server.cpp\client server.cpp\client server.cpp.cpp(75,12): warning C4302: '<function-style-cast>': truncation from 'char *' to 'int'
+C:\Users\prixi\OneDrive\Desktop\c programs\client server.cpp\client server.cpp\client server.cpp.cpp(78,17): warning C4311: '<function-style-cast>': pointer truncation from 'char *' to 'int'
+C:\Users\prixi\OneDrive\Desktop\c programs\client server.cpp\client server.cpp\client server.cpp.cpp(78,17): warning C4302: '<function-style-cast>': truncation from 'char *' to 'int'
+C:\Users\prixi\OneDrive\Desktop\c programs\client server.cpp\client server.cpp\client server.cpp.cpp(81,17): warning C4311: '<function-style-cast>': pointer truncation from 'char *' to 'int'
+C:\Users\prixi\OneDrive\Desktop\c programs\client server.cpp\client server.cpp\client server.cpp.cpp(81,17): warning C4302: '<function-style-cast>': truncation from 'char *' to 'int'
+  client server.cpp.vcxproj -> C:\Users\prixi\OneDrive\Desktop\c programs\client server.cpp\x64\Debug\client server.cpp.exe
